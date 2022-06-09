@@ -18,8 +18,8 @@ body{
     background-color: #F7F6F5;
 }
 
+
 header {
-    display: flex;
     gap: 5px;
     background-color: #2B2727;
     color: white;
@@ -32,34 +32,23 @@ header {
 header a {
   color: white;
   text-decoration: none;
+  font-size: medium;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #2B2727;
-    display: flex;
-  }
-  
-  li a {
-    display: block;  
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: medium;
-    text-align: center;
-    padding: 22px 22px;
-    text-decoration: none;
-  }
-  
-li a:hover:not(.active) {
-    background-color: #1b1919;
-  }
-  
+header a:hover {
+  color: white;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, 
+.navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
 .active {
-    background-color: #672F2F;
-  }
+color: white;
+}
 
 .logo {
   display: flex;
@@ -141,7 +130,7 @@ p {
   color: white;
   text-decoration: none;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   padding: 14px;
   width: 220px;
   transition: all 0.5s;
@@ -166,6 +155,7 @@ p {
 }
 
 .fixedButton:hover {
+  color: white;
   background-color:#753636;
   padding-right: 21px;
   padding-left:7px;
@@ -205,6 +195,7 @@ p {
 }
 
 .card {
+  position: inherit;
   width: fit-content;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -236,52 +227,26 @@ p {
   padding: 2px 16px;
 }
 
-form {
-  margin: 30px 0;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  padding: 1%;
-  margin: 1% auto;
-}
-
-.containerCenter {
-  text-align: center;
-}
-
-select {
-  position: relative;
-  width: 45%;
-  padding: 11px 13px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1.5px solid grey;
-  border-radius: 4px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: medium;
-  cursor: pointer;
+.form {
+  margin: auto;
+  width: 60%;
 }
 
 select:hover {
   border: 1.5px solid #672F2F;
 }
 
-input {
-  width: 45%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1.5px solid grey;
-  border-radius: 4px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: medium;
-}
-
 input:hover {
   border: 1.5px solid #672F2F;
+}
+
+.btn-primary{
+  border-color: #672F2F;
+  background-color: #672F2F;
+}
+
+.btn-primary:hover {
+  background-color: #753636;
 }
 
 legend {
@@ -347,6 +312,10 @@ textarea:hover {
   max-width: 300px;
   margin: auto;
   text-align: center;
+}
+
+.productCard p {
+  margin-bottom: 0;
 }
 
 .productCard img {
