@@ -485,6 +485,9 @@ textarea:hover {
   padding: 4px 4px 1px 4px;
   cursor: pointer;
   margin: 15px;
+  height: 32px;
+  padding-bottom: 4px;
+  padding-top: 1px
 }
 
 .bi-arrow-up-circle {
