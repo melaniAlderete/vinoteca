@@ -1,0 +1,104 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&display=swap');
+@import "generales";
+@import "index";
+@import "productos";
+@import "clubDeCata";
+@import "contacto";
+@import "bodegas";
+
+@media only screen and (max-width: 480px) {
+
+    header {
+      display: flex;
+      flex-direction: column;
+    } 
+    
+    nav {
+      width: 100%;
+      height:min-content;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    nav ul {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      align-items: center;
+    }
+    
+    nav ul li a{
+     font-size: 12px;
+    }
+    
+    .logo {
+      display: flex;
+      justify-content: center;
+    }
+    
+    main {
+      font-size: 10px;
+    }
+    
+    .video-text .small-text {
+      font-size: 12px;
+    }
+    
+    .video-text p {
+      font-size: 16px;
+    }
+    
+    .img {
+      height: 320px;
+    }
+    
+    .img-container p {
+      width: 157px;
+      font-size: 14px;
+    }
+    
+    h1 {
+      font-size: 18px;
+    }
+    
+    .img-container img {
+      height: 65%;
+      width: 65%;
+    }
+    
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+     .flip-card, .flip-card img, .flip-card-front, .flip-card-inner, .flip-card:hover,
+     .flip-card-back, .flip-card-back p{
+      display: none;
+    }
+    
+    .alt-card {
+      margin-top: 100px;
+      display: flex;
+      gap: 40px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .events {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    
+    .textContainer {
+      width: 100%;
+    }
+    
+    .fixedButton {
+      font-size: 16px;
+      padding: 9px;
+      width: 92px;
+    }
+    
+    }
+
