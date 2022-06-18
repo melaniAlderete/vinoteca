@@ -114,6 +114,13 @@ p {
   grid-template-areas: "header" "header" "header" "main" "main" "main" "main" "main" "main" "footer" "footer" "footer";
 }
 
+.titulo {
+  font-size: xx-large;
+  margin: 0 2%;
+  padding: 1% 0 0.3% 0;
+  border-bottom: 1.8px solid #672F2F;
+}
+
 .img-index {
   height: 500px;
   width: auto;
@@ -198,7 +205,7 @@ p {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 2% 0;
 }
 
@@ -240,13 +247,8 @@ p {
   padding: 1%;
 }
 
-.productCard button .cart:hover .bi-cart-fill,
-.bi-cart-check-fill {
-  display: none;
-}
-
-.cart:hover .bi-cart-check-fill {
-  display: inline;
+.cart:hover .bi-cart-fill::before {
+  content: "\f239";
 }
 
 .img {

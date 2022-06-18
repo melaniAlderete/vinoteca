@@ -2,7 +2,7 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 2% 0;
 }
   
@@ -44,15 +44,11 @@
     padding: 1%;
   }
   
-.productCard button
-.cart:hover .bi-cart-fill,
-.bi-cart-check-fill {
-    display: none;
+
+.cart:hover .bi-cart-fill::before{
+    content: "\F239";
 }
   
-.cart:hover .bi-cart-check-fill {
-    display: inline;
-}
   
 .img {
    width: 100%;
