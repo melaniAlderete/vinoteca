@@ -1,3 +1,7 @@
+$wine:#672F2F;
+$wineActive:#753636;
+
+
 .products {
     display: flex;
     gap: 30px;
@@ -26,22 +30,28 @@
         outline: 0;
         padding: 12px;
         color: white;
-        background-color: #672F2F;
+        background-color: $wine;
         text-align: center;
         cursor: pointer;
         width: 100%;
         font-size: 18px;
         font-family: 'Josefin Sans', sans-serif;;
         &:hover {  
-            background-color: #753636;
+            background-color: $wineActive;
           }
     }
 }
 
+$styles:(
+  gris: #7d7d7d,
+  font: 20px,
+  relleno: 1%
+);
+
 .price {
-    color: grey;
-    font-size: 20px;
-    padding: 1%;
+    color: map-get($styles, gris);
+    font-size: map-get($styles, font);
+    padding: map-get($styles, relleno);
   }
   
 

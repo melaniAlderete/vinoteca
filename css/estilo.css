@@ -9,7 +9,6 @@
 html {
   font-size: 62.5%;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -137,20 +136,20 @@ p {
 }
 
 .video {
-  width: 45%;
   height: 70%;
+  width: 45%;
 }
 
 .video iframe {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .video-text {
+  height: 40%;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  width: 40%;
-  height: 40%;
 }
 
 .video-text .small-text {
@@ -242,7 +241,7 @@ p {
 }
 
 .price {
-  color: grey;
+  color: #7d7d7d;
   font-size: 20px;
   padding: 1%;
 }
@@ -258,6 +257,7 @@ p {
 
 #video {
   margin: 1%;
+  width: 100%;
 }
 
 .events {
@@ -375,7 +375,7 @@ p {
 
 .form {
   margin: auto;
-  width: 60%;
+  width: 80%;
 }
 
 .form-control:focus {
@@ -472,7 +472,7 @@ textarea:hover {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front-back, .flip-card-back, .flip-card-front {
   position: absolute;
   width: 100%;
   height: 100%;

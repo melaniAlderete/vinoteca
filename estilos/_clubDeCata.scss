@@ -1,5 +1,9 @@
+$wine:#672F2F;
+$wineActive:#753636;
+
 #video {
     margin: 1%;
+    width: 100%;
 }
   
 .events {
@@ -19,7 +23,7 @@
     bottom: 0px;
     right: 0px;
     border-radius: 4px;
-    background-color: #672F2F;
+    background-color: $wine;
     border: none;
     color: white;
     text-decoration: none;
@@ -44,7 +48,7 @@
       }
     &:hover {
         color: white;
-        background-color:#753636;
+        background-color:$wineActive;
         padding-right: 21px;
         padding-left:7px;
       }
