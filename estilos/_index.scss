@@ -37,7 +37,7 @@ $dark:#2B2727;
 }
 
 .video-text {
-  @include sizes(40%, 40%);
+  width: 40%;
   display: flex;
   flex-direction: column;
 }
@@ -49,7 +49,7 @@ $dark:#2B2727;
 }
 
 .video-text p {
-  font-size: x-large;
+  font-size: 20px;
 }
 
 .video-index {

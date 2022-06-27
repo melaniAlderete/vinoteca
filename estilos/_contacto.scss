@@ -19,6 +19,7 @@ $background:#F7F6F5;
 
 .cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 90px;
     margin: 60px;
