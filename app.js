@@ -1,20 +1,33 @@
-function Producto (id, marca, bodega, variedad, varietal, precio) {
+function Producto (id, marca, bodega, variedad, varietal, precio, img) {
     this.id = id;
     this.marca = marca;
     this.bodega = bodega;
     this.variedad = variedad;
     this.varietal =varietal;
     this.precio = precio;
+    this.img = img;
 }
 
-const producto1 = new Producto(01, "Las Perdices", "Viña Las Perdices", "Tinto", "Malbec",1480);
-const producto2 = new Producto(02, "Perro Callejero", "Mosquita Muerta Wines", "Tinto", "Malbec",960);
-const producto3 = new Producto(03, "Sapo De Otro Pozo", "Mosquita Muerta Wines", "Tinto", "Malbec",1970);
-const producto4 = new Producto(04, "Sombrero", "Huentala Wines", "Tinto", "Cabernet franc",1050);
-const producto5 = new Producto(05, "Territorio", "Amalaya", "Tinto", "Malbec", 1080);
-const producto6 = new Producto(06, "El Enemigo", "Aleanna", "Tinto", "Malbec",3250);
+const producto1 = new Producto(01, "Las Perdices", "Viña Las Perdices", "Tinto", "Malbec",1480, "../images/lasperdices.png");
+const producto2 = new Producto(02, "Perro Callejero", "Mosquita Muerta Wines", "Tinto", "Malbec",960, "../images/perrocallejero.png");
+const producto3 = new Producto(03, "Sapo De Otro Pozo", "Mosquita Muerta Wines", "Tinto", "Malbec",1970, "../images/sapodeotropozo.png");
+const producto4 = new Producto(04, "Sombrero", "Huentala Wines", "Tinto", "Cabernet franc",1050, "../images/sombrero.png");
+const producto5 = new Producto(05, "Territorio", "Amalaya", "Tinto", "Malbec", 1080, "../images/territorio.png");
+const producto6 = new Producto(06, "El Enemigo", "Aleanna", "Tinto", "Malbec",3250, "../images/elenemigo.png");
 
 const productos = [producto1, producto2, producto3, producto4, producto5, producto6];
+
+const containerProductos = document.getElementById('products');
+
+productos.forEach(producto =>{
+    const div = document.createElement('div');
+    div.className = "productCard";
+    div.innerHTML = `<img src=${producto.img}>
+                    <h3>${producto.marca}</h3>
+                    <p class="price">$ ${producto.precio}</p>
+                    <p><button class="cart" onclick="alert('Producto añadido!')">Añadir al Carrito <i class="bi bi-cart-fill"></i></button></p>`
+containerProductos.append(div);
+})
 
 function ordenar(key){
 let productosAux = [...productos];
