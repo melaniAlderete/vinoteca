@@ -97,7 +97,6 @@ function addToCart(id) {
       items.push(productos[i]);
     }
   }
-  alert("Producto Añadido al Carrito!")
   console.log(items);
 }
 
