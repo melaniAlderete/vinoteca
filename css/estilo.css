@@ -199,6 +199,20 @@ p {
   font-size: x-large;
 }
 
+#ordenar {
+  justify-content: flex-end;
+  display: flex;
+  align-items: baseline;
+  margin-right: 25px;
+  margin-top: 5px;
+}
+#ordenar p {
+  font-size: small;
+}
+#ordenar .sort {
+  margin-left: 4px;
+}
+
 #products {
   display: flex;
   gap: 30px;
