@@ -120,4 +120,133 @@ p {
     "footer" "footer" "footer"
     ;
 }
+
+.cartOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(78, 78, 78, 0.5);
+    z-index: 10;
+    visibility: hidden;
+  }
+
+  .cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 11;
+    background: rgb(246 243 239);
+    padding: 1.5rem;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(100%);
+    h2 {
+        margin-bottom: 2rem;
+      }
+  }
+
+  .showCart {
+    transform: translateX(0%);
+  }
+
+  .transparentBcg {
+    visibility: visible;
+  }
+
+  @media screen and (min-width: 768px) {
+    .cart {
+      width: 30vw;
+      min-width: 450px;
+    }
+  }
+  
+  .cartHeader {
+    display: flex;
+    gap: 20%;
+  }
+
+  .closeCart {
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+
+  .cartItem {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+    img {
+        width: 75px;
+        height: 75px;
+      }
+    h4 {
+        font-size: medium;
+      }
+    h5 {
+        font-size: small;
+        margin: 0.5rem 0;
+      }
+  }
+
+  .opcionesCarrito{
+    display: flex;
+    align-items: baseline;
+    p{
+        font-size: small;
+        margin-right: 7px;
+        margin-left: 7px;
+    }
+  }
+
+  .bi-trash3 {
+    font-size: large;
+    margin-left: 1.5rem;
+    color: grey;
+    cursor: pointer;
+    &:hover{
+      color: $wine;
+    }
+  }
+
+  .bi-plus-lg,
+  .bi-dash-lg {
+    cursor: pointer;
+    font-size: small;
+  }
+
+  .cartFooter {
+    margin-top: 2rem;
+
+    h3 {
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+      }
+  }
+
+  .innerButtons{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .innerButton{
+    border-radius: 4px;
+    background-color: $wine;
+    border: none;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    padding: 14px;
+    width: auto;
+     &:hover {
+        background-color: $wineActive;
+     }
+  }
+
+
   

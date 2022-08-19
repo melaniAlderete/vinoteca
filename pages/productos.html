@@ -7,6 +7,7 @@
     <meta  name="description" content="Vinos blancos, tintos y rosados, bebidas espirituosas, espumantes. Selección importada y nacional.">
     <meta name="keywords" content="VINOS, ESPUMANTES, WHISKY, GINS, BEBIDAS">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.26/sweetalert2.all.js"></script>
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <title>In Vino Veritas | Productos</title>
@@ -40,7 +41,7 @@
                     </li>
                   </ul>
                 </div>
-                <a class="text-reset me-3" href="#"><span class="badge badge-pill bg-danger">1</span>
+                <a class="text-reset me-3" id="cartButton" href="#"><span class="badge badge-pill bg-danger" id="quantity">0</span>
                   <i class="bi bi-cart-fill"></i></a>
               </div>
             </nav>
@@ -57,7 +58,28 @@
         </select>
       </div>
 
-        <div id="products"></div>
+      <div id="products"></div>
+      
+      <div id="cartOverlay" class="cartOverlay">
+        <div class="cart">
+          <div class="cartHeader">
+            <span class="closeCart" id="closeCart">
+              <i class="bi bi-x-lg"></i>
+            </span>
+            <h2>CARRITO DE COMPRAS</h2>
+          </div>
+          <div class="cartContent">
+            <div id="cartItems"></div>
+            <div class="cartFooter">
+              <h3>TOTAL: $<span id="totalCost"></span></h3>
+              <div class="innerButtons">
+                <button id="clean" class="innerButton">VACIAR CARRITO</button>
+                <button class="innerButton">INICIAR COMPRA</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </main>
 
@@ -74,5 +96,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="../app.js"></script>
+<script src="../cart.js"></script>
 </body>
 </html>

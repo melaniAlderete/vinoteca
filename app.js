@@ -71,7 +71,8 @@ const productos = [
   producto5,
   producto6,
 ];
-let items = [];
+
+let items = (localStorage.getItem("cart") == null) ? [] : JSON.parse(localStorage.getItem("cart"));
 const containerProductos = document.getElementById("products");
 
 function crearCards(array) {
@@ -83,7 +84,7 @@ function crearCards(array) {
     div.innerHTML = `<img src=${producto.img}>
                     <h3>${producto.marca}</h3>
                     <p class="price">$ ${producto.precio}</p>
-                    <p><button type="button" class="cart">Añadir al Carrito <i class="bi bi-cart-fill"></i></button></p>`;
+                    <p><button type="button" class="addToCart">Añadir al Carrito <i class="bi bi-cart-fill"></i></button></p>`;
     containerProductos.append(div);
   });
   addCartButton();
@@ -94,14 +95,30 @@ crearCards(productos);
 function addToCart(id) {
   for (let i = 0; i < productos.length; i++) {
     if (id == productos[i].id) {
-      items.push(productos[i]);
+      const item = productos[i];
+      let search = items.find((x) => x.id === productos[i].id);
+      if(search === undefined) {
+        items.push({...item,
+        unidades: 1,});
+      } else {
+        search.unidades += 1;
+      }
+      cartCard();
+      cartNumbers(item);
+      totalCost(item);
     }
   }
-  console.log(items);
+  Swal.fire({
+    icon: 'success',
+    title: 'Producto Añadido al Carrito!',
+    showConfirmButton: false,
+    timer: 1400
+  })
+  localStorage.setItem("cart", JSON.stringify(items));
 }
 
 function addCartButton() {
-  const buttons = document.getElementsByClassName("cart");
+  const buttons = document.getElementsByClassName("addToCart");
   for (let i = 0; i < buttons.length; i++) {
     let productId = buttons[i].parentElement.parentElement.id;
     buttons[i].addEventListener("click", () => {
@@ -152,30 +169,3 @@ function filtrar(bodega, variedad, varietal, precioMax, precioMin) {
 console.log(
   filtrar("Mosquita Muerta Wines", "Tinto", undefined, 3000, undefined)
 );
-
-function total(contador, envio) {
-  if (contador == 0) {
-    alert("Su carrito esta vacío");
-  } else {
-    costo = contador + envio;
-  }
-  return costo;
-}
-
-function lista() {
-  var carrito = [];
-  for (const producto of items) {
-    carrito = carrito + "-" + producto.marca + "\n";
-  }
-  alert("Su carrito:\n" + carrito);
-}
-
-function mostrar(mensaje) {
-  console.log("Ingrese en la funcion mostrar");
-  alert("El costo total de su carrito con envío incluido es: $" + mensaje);
-  lista(productos);
-}
-
-var envio = 700;
-var contador = 0;
-var costo = 0;
