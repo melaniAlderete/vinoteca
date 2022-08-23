@@ -28,6 +28,7 @@ function cartCard() {
                     </div>`
   cardItems.append(div);
   });
+  addFunction()
 }
 
 
@@ -37,41 +38,89 @@ function addFunction() {
   const trash= document.getElementsByClassName("bi-trash3");
   for (let i = 0; i < increase.length; i++) {
     let productId = increase[i].parentElement.parentElement.id;
-    buttons[i].addEventListener("click", () => {
-      increase(productId);
+    increase[i].addEventListener("click", () => {
+      increaseButton(productId);
     });
   }
   for (let i = 0; i < decrease.length; i++) {
     let productId = decrease[i].parentElement.parentElement.id;
-    buttons[i].addEventListener("click", () => {
-      decrease(productId);
+    decrease[i].addEventListener("click", () => {
+      decreaseButton(productId);
     });
   }
   for (let i = 0; i < trash.length; i++) {
     let productId = trash[i].parentElement.parentElement.id;
-    buttons[i].addEventListener("click", () => {
-      trash(productId);
+    trash[i].addEventListener("click", () => {
+      trashButton(productId);
     });
   }
 }
 
-function increase(productId){
 
-
+function increaseButton(productId){
+  let carrito = (localStorage.getItem("cart") == null) ? [] : JSON.parse(localStorage.getItem("cart"));
+  for (let i = 0; i < carrito.length; i++) {
+    if(productId == carrito[i].id){
+      carrito[i].unidades += 1;
+      localStorage.removeItem("cart");
+      localStorage.setItem("cart", JSON.stringify(carrito));
+      totalCost(carrito[i]);
+      cartNumbers();
+    }
+  }
+cartCard();
 }
 
-function decrease(productId){
-
+function decreaseButton(productId){
+  let carrito = (localStorage.getItem("cart") == null) ? [] : JSON.parse(localStorage.getItem("cart"));
+  for (let i = 0; i < carrito.length; i++) {
+    if(productId == carrito[i].id){
+      if(carrito[i].unidades > 1){
+        carrito[i].unidades -= 1;
+        localStorage.removeItem("cart");
+        localStorage.setItem("cart", JSON.stringify(carrito));
+        decreaseCost(carrito[i]);
+        decreaseCartNumbers();
+      }
+    }
+  }
+cartCard();
 }
 
-function trash(productId){
-
+function trashButton(productId){
+  let carrito = (localStorage.getItem("cart") == null) ? [] : JSON.parse(localStorage.getItem("cart"));
+  for (let i = 0; i < carrito.length; i++) {
+    if(productId == carrito[i].id){
+      deleteCost(carrito[i]);
+      deleteCartNumbers(carrito[i]);
+      carrito.splice(i,1);
+      localStorage.removeItem("cart");
+      localStorage.setItem("cart", JSON.stringify(carrito));
+    }
+  }
+cartCard();
 }
 
 function totalCost(producto) {
   let totalCost = localStorage.getItem("totalCost");
   let costo = (typeof(totalCost) == "object") ? 0 : parseInt(totalCost);
   costo += producto.precio;
+    localStorage.setItem("totalCost", costo);
+  document.querySelector("#totalCost").textContent = costo;
+}
+
+function decreaseCost(producto) {
+  let totalCost = localStorage.getItem("totalCost");
+  let costo = (typeof(totalCost) == "object") ? 0 : parseInt(totalCost);
+  costo -= producto.precio;
+    localStorage.setItem("totalCost", costo);
+  document.querySelector("#totalCost").textContent = costo;
+}
+
+function deleteCost(producto) {
+  let totalCost = localStorage.getItem("totalCost");
+  let costo = (typeof(totalCost) == "object") ? 0 : parseInt(totalCost);
+  costo -= (producto.precio * producto.unidades);
     localStorage.setItem("totalCost", costo);
   document.querySelector("#totalCost").textContent = costo;
 }
@@ -85,6 +134,24 @@ function cartNumbers() {
   } else{
     localStorage.setItem("numCart", 1);
     document.querySelector("#quantity").textContent = 1;
+  }
+}
+
+function decreaseCartNumbers() {
+  let cantidad = localStorage.getItem("numCart");
+  cantidad = parseInt(cantidad);
+  if (cantidad){
+  localStorage.setItem("numCart", cantidad -= 1);
+  document.querySelector("#quantity").textContent = cantidad; 
+  }
+}
+
+function deleteCartNumbers(producto) {
+  let cantidad = localStorage.getItem("numCart");
+  cantidad = parseInt(cantidad);
+  if (cantidad){
+  localStorage.setItem("numCart", cantidad -= producto.unidades);
+  document.querySelector("#quantity").textContent = cantidad;
   }
 }
 

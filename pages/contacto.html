@@ -20,7 +20,7 @@
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark ">
         <div class="container-fluid">
           <div class="logo">
-              <a href="../index.html">In Vino Veritas</a>
+              <a href="./index.html">In Vino Veritas</a>
           </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
                     </li>
                   </ul>
                 </div>
-                <a class="text-reset me-3" href="#"><span class="badge badge-pill bg-danger" id="quantity">0</span>
+                <a class="text-reset me-3" id="cartButton" href="#"><span class="badge badge-pill bg-danger" id="quantity">0</span>
                   <i class="bi bi-cart-fill"></i></a>
               </div>
             </nav>
@@ -123,6 +123,28 @@
     </div>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </div>
+
+<div id="cartOverlay" class="cartOverlay">
+    <div class="cart">
+      <div class="cartHeader">
+        <span class="closeCart" id="closeCart">
+          <i class="bi bi-x-lg"></i>
+        </span>
+        <h2>CARRITO DE COMPRAS</h2>
+      </div>
+      <div class="cartContent">
+        <div id="cartItems"></div>
+        <div class="cartFooter">
+          <h3>TOTAL: $<span id="totalCost"></span></h3>
+          <div class="innerButtons">
+            <button id="clean" class="innerButton">VACIAR CARRITO</button>
+            <button class="innerButton">INICIAR COMPRA</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
     </main>
 
     <footer>
@@ -137,7 +159,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="../cart.js"></script>
+<script src="../javascript/cart.js"></script>
 
 </body>
 </html>

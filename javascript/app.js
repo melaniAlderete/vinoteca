@@ -72,7 +72,6 @@ const productos = [
   producto6,
 ];
 
-let items = (localStorage.getItem("cart") == null) ? [] : JSON.parse(localStorage.getItem("cart"));
 const containerProductos = document.getElementById("products");
 
 function crearCards(array) {
@@ -93,6 +92,7 @@ function crearCards(array) {
 crearCards(productos);
 
 function addToCart(id) {
+  let items = (localStorage.getItem("cart") == null) ? [] : JSON.parse(localStorage.getItem("cart"));
   for (let i = 0; i < productos.length; i++) {
     if (id == productos[i].id) {
       const item = productos[i];
