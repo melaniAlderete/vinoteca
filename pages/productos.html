@@ -49,6 +49,8 @@
 
     <main>
         <h1>Productos</h1>
+        <div id="opcionesProductos">
+          <p id="filtrar">Filtrar <i class="bi bi-funnel"></i></p>
       <div id="ordenar">
         <p>Ordenar por</p>
         <select class="sort" id="sort">
@@ -57,6 +59,7 @@
           <option class="selector" value="-">Precio: Menor a Mayor</option>
         </select>
       </div>
+    </div>
 
       <div id="products"></div>
       
@@ -75,6 +78,45 @@
               <div class="innerButtons">
                 <button id="clean" class="innerButton">VACIAR CARRITO</button>
                 <button class="innerButton">INICIAR COMPRA</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="filterOverlay" class="filterOverlay">
+        <div class="filter">
+          <div class="filterHeader">
+            <span class="closeCart" id="closeFilter">
+              <i class="bi bi-x-lg"></i>
+            </span>
+            <h2>FILTROS</h2>
+          </div>
+          <div class="filterContent">
+            <div id="filters">
+              <div>
+                <h5>Bodegas</h5>
+                
+              </div>
+              <div>
+                <h5>Variedad</h5>
+                <label for="#">#</label><input type="radio" value="#">
+              </div>
+              <div>
+                <h5>Varietal</h5>
+                <label for="#">#</label><input type="radio" value="#">
+              </div>
+              <div>
+                <label for="minPrice">Precio minímo</label>
+                <input type="number" min="#" max="#">
+                <label for="maxPrice">Precio maxímo</label>
+                <input type="number" min="#" max="#">
+              </div>
+            </div>
+            <div class="filterFooter">
+              <div class="innerButtonsFilter">
+                <button id="cleanFilters" class="innerButtonFilter">LIMPIAR</button>
+                <button class="innerButtonFilter">APLICAR</button>
               </div>
             </div>
           </div>

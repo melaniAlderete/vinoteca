@@ -1,165 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta  name="description" content="Te invitamos a contactarnos por nuestras redes o a nuestro WhatsApp +54 341 670-4840. Horarios de atención 10:00AM a 20:30PM.">
-    <meta name="keywords" content="CONTACTO, VINOTECA, ASESORAMIENTO, CLUB DE CATA, BEBIDAS ROSARIO">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Te invitamos a contactarnos por nuestras redes o a nuestro WhatsApp +54 341 670-4840. Horarios de atención 10:00AM a 20:30PM."
+    />
+    <meta
+      name="keywords"
+      content="CONTACTO, VINOTECA, ASESORAMIENTO, CLUB DE CATA, BEBIDAS ROSARIO"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.26/sweetalert2.all.js"></script>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("MeQoqfQYDPq2Puz9C");
+      })();
+    </script>
     <title>In Vino Veritas | Contacto</title>
-</head>
+  </head>
 
-<body>
-
-<div class="grid">
-
-    <header>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark ">
-        <div class="container-fluid">
-          <div class="logo">
+  <body>
+    <div class="grid">
+      <header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+            <div class="logo">
               <a href="../index.html">In Vino Veritas</a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo01"
+              aria-controls="navbarTogglerDemo01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="./productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./bodegas.html">Bodegas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./clubDeCata.html">Club De Cata</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="./contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+            <a class="text-reset me-3" id="cartButton" href="#"
+              ><span class="badge badge-pill bg-danger" id="quantity">0</span>
+              <i class="bi bi-cart-fill"></i
+            ></a>
           </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" href="./productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./bodegas.html">Bodegas</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./clubDeCata.html">Club De Cata</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="./contacto.html">Contacto</a>
-                    </li>
-                  </ul>
-                </div>
-                <a class="text-reset me-3" id="cartButton" href="#"><span class="badge badge-pill bg-danger" id="quantity">0</span>
-                  <i class="bi bi-cart-fill"></i></a>
-              </div>
-            </nav>
+        </nav>
       </header>
 
-    <main>
-    <div class="background">
-        <h1>Contacto</h1>
-        <h2>Redes Sociales</h2>
-        <div class="cards">
+      <main>
+        <div class="background">
+          <h1>Contacto</h1>
+          <h2>Redes Sociales</h2>
+          <div class="cards">
             <div class="cardContainer">
-                <a href="https://www.instagram.com/invinoveritasvinoteca/" target="_blank">
-                    <div class="card">
-                        <i class="bi bi-instagram contactIcons"></i>
-                        <div class="cardText">
-                            <p>Instagram</p>
-                        </div>
-                    </div>
-                </a>
+              <a
+                href="https://www.instagram.com/invinoveritasvinoteca/"
+                target="_blank"
+              >
+                <div class="card">
+                  <i class="bi bi-instagram contactIcons"></i>
+                  <div class="cardText">
+                    <p>Instagram</p>
+                  </div>
+                </div>
+              </a>
             </div>
 
             <div class="cardContainer">
-                <a href="https://www.facebook.com/" target="_blank">
-                    <div class="card facebook">
-                        <i class="bi bi-facebook contactIcons"></i>
-                        <div class="cardText">
-                            <p>Facebook</p>
-                        </div>
-                    </div>
-                </a>
+              <a href="https://www.facebook.com/" target="_blank">
+                <div class="card facebook">
+                  <i class="bi bi-facebook contactIcons"></i>
+                  <div class="cardText">
+                    <p>Facebook</p>
+                  </div>
+                </div>
+              </a>
             </div>
 
             <div class="cardContainer">
-                <a href="https://api.whatsapp.com/send?phone=543416704840&text=Hola%2C+quería+consultarte+por" target="_blank">
-                    <div class="card whatsapp">
-                        <i class="bi bi-whatsapp contactIcons"></i>
-                        <div class="cardText">
-                            <p>WhatsApp</p>
-                        </div>
-                    </div>
-                </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=543416704840&text=Hola%2C+quería+consultarte+por"
+                target="_blank"
+              >
+                <div class="card whatsapp">
+                  <i class="bi bi-whatsapp contactIcons"></i>
+                  <div class="cardText">
+                    <p>WhatsApp</p>
+                  </div>
+                </div>
+              </a>
             </div>
-        </div>
-    </div>
-<div class="form">
-    <div class="container px-5 my-5">
-        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-            <legend>Consultas</legend>
-            <div class="form-floating mb-3">
-                <select class="form-select" id="seleccione" aria-label="Seleccione...">
-                    <option value="Servicio al cliente">Servicio al cliente</option>
-                    <option value="Club de cata">Club de cata</option>
-                </select>
-                <label for="seleccione">Seleccione...</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input class="form-control" id="nombre" type="text" placeholder="Nombre" data-sb-validations="required" />
-                <label for="nombre">Nombre</label>
-                <div class="invalid-feedback" data-sb-feedback="nombre:required">Este campo es necesario.</div>
-            </div>
-            <div class="form-floating mb-3">
-                <input class="form-control" id="email" type="email" placeholder="Email" data-sb-validations="required,email" />
-                <label for="email">Email</label>
-                <div class="invalid-feedback" data-sb-feedback="email:required">Este campo es necesario.</div>
-                <div class="invalid-feedback" data-sb-feedback="email:email">Email no es valido.</div>
-            </div>
-            <div class="form-floating mb-3">
-                <textarea class="form-control" id="mensaje" type="text" placeholder="Mensaje" style="height: 10rem;" data-sb-validations="required"></textarea>
-                <label for="mensaje">Mensaje</label>
-                <div class="invalid-feedback" data-sb-feedback="mensaje:required">Mensaje es necesario.</div>
-            </div>
-            <div class="d-none" id="submitErrorMessage">
-                <div class="text-center text-danger mb-3">Error enviando mensaje!</div>
-            </div>
-            <div class="d-grid">
-                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button>
-            </div>
-        </form>
-    </div>
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</div>
-
-<div id="cartOverlay" class="cartOverlay">
-    <div class="cart">
-      <div class="cartHeader">
-        <span class="closeCart" id="closeCart">
-          <i class="bi bi-x-lg"></i>
-        </span>
-        <h2>CARRITO DE COMPRAS</h2>
-      </div>
-      <div class="cartContent">
-        <div id="cartItems"></div>
-        <div class="cartFooter">
-          <h3>TOTAL: $<span id="totalCost"></span></h3>
-          <div class="innerButtons">
-            <button id="clean" class="innerButton">VACIAR CARRITO</button>
-            <button class="innerButton">INICIAR COMPRA</button>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+        <div class="form">
+          <div class="container px-5 my-5">
+            <form id="contactForm">
+              <legend>Consultas</legend>
+              <div class="form-floating mb-3">
+                <select
+                  class="form-select"
+                  id="seleccione"
+                  aria-label="Seleccione..."
+                >
+                  <option value="Servicio al cliente">
+                    Servicio al cliente
+                  </option>
+                  <option value="Club de cata">Club de cata</option>
+                </select>
+                <label for="seleccione">Seleccione...</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="nombre"
+                  type="text"
+                  placeholder="Nombre"
+                />
+                <label for="nombre">Nombre</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  placeholder="Email"
+                />
+                <label for="email">Email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  type="text"
+                  placeholder="Mensaje"
+                  style="height: 10rem"
+                ></textarea>
+                <label for="mensaje">Mensaje</label>
+              </div>
+              <div class="d-grid">
+                <button
+                  class="btn btn-primary btn-lg"
+                  id="submitButton"
+                  type="button"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
 
-    </main>
 
-    <footer>
+        <div id="cartOverlay" class="cartOverlay">
+          <div class="cart">
+            <div class="cartHeader">
+              <span class="closeCart" id="closeCart">
+                <i class="bi bi-x-lg"></i>
+              </span>
+              <h2>CARRITO DE COMPRAS</h2>
+            </div>
+            <div class="cartContent">
+              <div id="cartItems"></div>
+              <div class="cartFooter">
+                <h3>TOTAL: $<span id="totalCost"></span></h3>
+                <div class="innerButtons">
+                  <button id="clean" class="innerButton">VACIAR CARRITO</button>
+                  <button class="innerButton">INICIAR COMPRA</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
         <p class="footerText">&copy; Melani Alderete 2022</p>
         <div class="footerIcons">
-            <a href="https://www.instagram.com/invinoveritasvinoteca" target="_blank">Instagram <i class="bi bi-instagram"></i></a>
-            <a href="https://www.facebook.com/" target="_blank">Facebook <i class="bi bi-facebook"></i></a>
-            <a href="https://api.whatsapp.com/send?phone=543416704840&text=Hola%2C+quería+consultarte+por" target="_blank">WhatsApp <i class="bi bi-whatsapp"></i></a>
+          <a
+            href="https://www.instagram.com/invinoveritasvinoteca"
+            target="_blank"
+            >Instagram <i class="bi bi-instagram"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            >Facebook <i class="bi bi-facebook"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=543416704840&text=Hola%2C+quería+consultarte+por"
+            target="_blank"
+            >WhatsApp <i class="bi bi-whatsapp"></i
+          ></a>
         </div>
-    </footer>
+      </footer>
+    </div>
 
-</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/contact.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="../javascript/cart.js"></script>
-
-</body>
+  </body>
 </html>

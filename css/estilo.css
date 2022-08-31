@@ -324,10 +324,25 @@ p {
   font-size: x-large;
 }
 
+#opcionesProductos {
+  display: flex;
+  align-items: baseline;
+}
+
+#filtrar {
+  margin-left: 25px;
+  font-size: small;
+  cursor: pointer;
+}
+#filtrar i {
+  font-size: small;
+}
+
 #ordenar {
   justify-content: flex-end;
   display: flex;
   align-items: baseline;
+  margin-left: auto;
   margin-right: 25px;
   margin-top: 5px;
 }
@@ -336,6 +351,82 @@ p {
 }
 #ordenar .sort {
   margin-left: 4px;
+}
+
+.filterOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(78, 78, 78, 0.5);
+  z-index: 10;
+  visibility: hidden;
+}
+
+.filter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 11;
+  background: rgb(246, 243, 239);
+  padding: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+.filter h2 {
+  margin-bottom: 2rem;
+}
+
+.showFilter {
+  transform: translateX(0%);
+}
+
+.transparentBcg {
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+.filterHeader {
+  display: flex;
+  gap: 36%;
+}
+
+.closeFilter {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.filterFooter {
+  margin-top: 2rem;
+}
+
+.innerButtonsFilter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.innerButtonFilter {
+  border-radius: 4px;
+  background-color: #672F2F;
+  border: none;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  padding: 14px 38px;
+  width: auto;
+}
+.innerButtonFilter:hover {
+  background-color: #753636;
 }
 
 #products {
