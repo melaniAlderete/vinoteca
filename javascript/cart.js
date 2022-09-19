@@ -197,7 +197,7 @@ function checkoutMail(email, Toast) {
   let products = [];
   let carrito = JSON.parse(localStorage.getItem("cart"));
   carrito.forEach((carrito) => {
-    products.push(carrito.marca+" x"+ carrito.unidades);
+    products.push(" "+carrito.marca+" x"+ carrito.unidades);
   })
   let params = {
     random_number: getRandomNum(),
@@ -226,10 +226,10 @@ function checkoutMail(email, Toast) {
 async function startPayment() {
   let totalCost = parseInt(localStorage.getItem("totalCost"));
   	const email  = await Swal.fire({
-  title: 'Input email address',
+  title: 'Ingrese su dirección de email',
   input: 'email',
-  inputLabel: 'Your email address',
-  inputPlaceholder: 'Enter your email address'
+  inputLabel: 'para continuar con la compra',
+  inputPlaceholder: 'Ingrese su dirección de email'
 })
   Swal.fire({
     icon: 'warning',
@@ -261,7 +261,7 @@ async function startPayment() {
 }
 
 async function payment(cost) {
-  let wnd = window.open("https://www.mercadopago.com.ar/", "_blank");
+  let wnd = window.open("https://mpago.la/13NDtZg", "_blank");
   let later = () => {
     return new Promise((resolve) => {
       setTimeout(resolve, 1500);

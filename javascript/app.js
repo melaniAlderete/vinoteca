@@ -62,6 +62,60 @@ const producto6 = new Producto(
   3250,
   "../images/elenemigo.png"
 );
+const producto7 = new Producto(
+  07,
+  "Los intocables",
+  "Finca Las Moras",
+  "Tinto",
+  "Malbec",
+  1472,
+  "../images/losintocables.png"
+);
+const producto8 = new Producto(
+  08,
+  "Malcriado",
+  "Mosquita Muerta Wines",
+  "Tinto",
+  "Malbec",
+  8600,
+  "../images/malcriado.png"
+);
+const producto9 = new Producto(
+  09,
+  "Gran Sombrero",
+  "Huentala Wines",
+  "Tinto",
+  "Malbec",
+  2000,
+  "../images/gransombrero.png"
+);
+const producto10 = new Producto(
+  10,
+  "Altos Las Hormigas",
+  "Altos Las Hormigas",
+  "Tinto",
+  "Malbec",
+  960,
+  "../images/altolashormigas.png"
+);
+const producto11 = new Producto(
+  11,
+  "Rosé",
+  "Luigi Bosca",
+  "Rosado",
+  "Blend",
+  2485,
+  "../images/rose.png"
+);
+const producto12 = new Producto(
+  12,
+  "Brut",
+  "Luigi Bosca",
+  "Champagne",
+  "image.png",
+  5680,
+  "../images/brut.png"
+);
 
 const productos = [
   producto1,
@@ -70,6 +124,12 @@ const productos = [
   producto4,
   producto5,
   producto6,
+  producto7,
+  producto8,
+  producto9,
+  producto10,
+  producto11,
+  producto12,
 ];
 
 const containerProductos = document.getElementById("products");
