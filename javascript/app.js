@@ -229,35 +229,3 @@ function filtrar(bodega, variedad, varietal, precioMax, precioMin) {
 console.log(
   filtrar("Mosquita Muerta Wines", "Tinto", undefined, 3000, undefined)
 );
-
-
-
-const filterDOM = document.querySelector(".filter");
-const filterOverlay = document.querySelector(".filterOverlay");
-let filterButton = document.getElementById("filtrar");
-let closeFilter = document.getElementById("closeFilter");
-
-productos.forEach((producto) => {
-  const divBodega = document.createElement("div");
-  divBodega.className = "filtroBodega";
-  divBodega.innerHTML = `<label for="${producto.bodega}">${producto.bodega}</label><input type="radio" value="${producto.bodega}">`
-  const divVariedad = document.createElement("div");
-  divVariedad.className = "filtroVariedad";
-  divVariedad.innerHTML = `<label for="${producto.variedad}">${producto.variedad}</label><input type="radio" value="${producto.variedad}">`
-  const divVarietal = document.createElement("div");
-  divVarietal.className = "filtroVarietal";
-  divVarietal.innerHTML = `<label for="${producto.varietal}">${producto.varietal}</label><input type="radio" value="${producto.varietal}}">`
-});
-
-function showFilters() {
-  filterOverlay.classList.add('transparentBcg');
-  filterDOM.classList.add('showFilter');
-}
-
-function hideCart(){
-  filterOverlay.classList.remove('transparentBcg');
-  filterDOM.classList.remove('showFilter');
-}
-
-filterButton.onclick = showFilters;
-closeFilter.onclick = hideCart;
