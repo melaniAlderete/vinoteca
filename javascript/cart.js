@@ -231,6 +231,8 @@ async function startPayment() {
   inputLabel: 'para continuar con la compra',
   inputPlaceholder: 'Ingrese su dirección de email'
 })
+console.log(email)
+if (email.isConfirmed) {
   Swal.fire({
     icon: 'warning',
     title: 'Esta por ser redireccionado a la página de MERCADO PAGO para abonar el monto de $ '+totalCost,
@@ -243,7 +245,6 @@ async function startPayment() {
       timer: 5000,
       timerProgressBar: true,
     });
-
     payment(totalCost)
       .then(() => {
        hideCart();
@@ -258,6 +259,7 @@ async function startPayment() {
         console.log(error);
       });
   });
+}
 }
 
 async function payment(cost) {
