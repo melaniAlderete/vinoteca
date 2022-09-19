@@ -129,6 +129,10 @@ $wineActive:#753636;
     img {
         width: 100%;
       }
+    h3{
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
     h2 {
         font-size: x-large;
         padding: 1%;
@@ -146,6 +150,9 @@ $wineActive:#753636;
         font-family: 'Josefin Sans', sans-serif;;
         &:hover {  
             background-color: $wineActive;
+            .bi-cart-fill::before{
+              content: "\F239";
+            }
           }
     }
 }
@@ -159,13 +166,10 @@ $styles:(
 .price {
     color: map-get($styles, gris);
     font-size: map-get($styles, font);
-    padding: map-get($styles, relleno);
   }
   
 
-.cart:hover .bi-cart-fill::before{
-    content: "\F239";
-}
+
   
   
 .img {

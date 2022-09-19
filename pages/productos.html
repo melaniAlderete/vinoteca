@@ -10,6 +10,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.26/sweetalert2.all.js"></script>
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("MeQoqfQYDPq2Puz9C");
+    })();
+  </script>  
     <title>In Vino Veritas | Productos</title>
 </head>
 <body>
@@ -49,8 +58,6 @@
 
     <main>
         <h1>Productos</h1>
-        <div id="opcionesProductos">
-          <p id="filtrar">Filtrar <i class="bi bi-funnel"></i></p>
       <div id="ordenar">
         <p>Ordenar por</p>
         <select class="sort" id="sort">
@@ -59,7 +66,6 @@
           <option class="selector" value="-">Precio: Menor a Mayor</option>
         </select>
       </div>
-    </div>
 
       <div id="products"></div>
       
@@ -73,50 +79,11 @@
           </div>
           <div class="cartContent">
             <div id="cartItems"></div>
-            <div class="cartFooter">
-              <h3>TOTAL: $<span id="totalCost"></span></h3>
+            <div class="cartFooter" hidden>
+              <h3 id="totalCostDom">TOTAL: $<span id="totalCost"></span></h3>
               <div class="innerButtons">
                 <button id="clean" class="innerButton">VACIAR CARRITO</button>
-                <button class="innerButton">INICIAR COMPRA</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="filterOverlay" class="filterOverlay">
-        <div class="filter">
-          <div class="filterHeader">
-            <span class="closeCart" id="closeFilter">
-              <i class="bi bi-x-lg"></i>
-            </span>
-            <h2>FILTROS</h2>
-          </div>
-          <div class="filterContent">
-            <div id="filters">
-              <div>
-                <h5>Bodegas</h5>
-                
-              </div>
-              <div>
-                <h5>Variedad</h5>
-                <label for="#">#</label><input type="radio" value="#">
-              </div>
-              <div>
-                <h5>Varietal</h5>
-                <label for="#">#</label><input type="radio" value="#">
-              </div>
-              <div>
-                <label for="minPrice">Precio minímo</label>
-                <input type="number" min="#" max="#">
-                <label for="maxPrice">Precio maxímo</label>
-                <input type="number" min="#" max="#">
-              </div>
-            </div>
-            <div class="filterFooter">
-              <div class="innerButtonsFilter">
-                <button id="cleanFilters" class="innerButtonFilter">LIMPIAR</button>
-                <button class="innerButtonFilter">APLICAR</button>
+                <button id="pay" type="button" class="innerButton">INICIAR COMPRA</button>
               </div>
             </div>
           </div>
@@ -139,5 +106,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="../javascript/app.js"></script>
 <script src="../javascript/cart.js"></script>
+<script src="../javascript/payment.js"></script>
 </body>
 </html>

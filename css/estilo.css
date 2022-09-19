@@ -238,6 +238,10 @@ p {
   background-color: #753636;
 }
 
+.hideButtons {
+  visibility: hidden;
+}
+
 .titulo {
   font-size: xx-large;
   margin: 0 2%;
@@ -449,6 +453,10 @@ p {
 .productCard img {
   width: 100%;
 }
+.productCard h3 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
 .productCard h2 {
   font-size: x-large;
   padding: 1%;
@@ -468,15 +476,13 @@ p {
 .productCard button:hover {
   background-color: #753636;
 }
+.productCard button:hover .bi-cart-fill::before {
+  content: "\f239";
+}
 
 .price {
   color: #7d7d7d;
   font-size: 20px;
-  padding: 1%;
-}
-
-.cart:hover .bi-cart-fill::before {
-  content: "\f239";
 }
 
 .img {
